@@ -1,0 +1,165 @@
+/* Futuristic styling for Milena Tetris */
+/* Body: Full height, dark background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace; /* Monospace font for retro-futuristic feel */
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); /* Dark gradient background */
+    color: #00ffff; /* Cyan text color */
+    height: 100vh;
+    overflow: auto; /* Allow scrolling if needed */
+}
+
+/* Wrapper: Contains border and padding, full height */
+.wrapper {
+    height: 100vh;
+    padding: 20px;
+    border: 5px solid #00ffff; /* Neon cyan border */
+    border-radius: 20px;
+    box-shadow: 0 0 50px #00ffff, inset 0 0 50px rgba(0, 255, 255, 0.1); /* Glow effects */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Game container: Flex layout for sidebar and main game area, takes available space */
+.game-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Sidebar: Left panel with instructions and scoreboard, glassmorphism effect */
+.sidebar {
+    width: 250px;
+    background: rgba(0, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for glass look */
+    border-right: 2px solid #00ffff; /* Neon border */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Scroll if needed */
+}
+
+.instructions h2, .scoreboard h2 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 15px;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    color: #00ffff;
+}
+
+.scoreboard {
+    margin-top: 30px;
+}
+
+#score, #lines, #level {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.next-piece h3 {
+    color: #ff00ff;
+    margin-bottom: 10px;
+}
+
+#next-canvas {
+    border: 1px solid #00ffff;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.game-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff00ff;
+    text-shadow: 0 0 20px #ff00ff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.start-btn, .restart-btn {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.start-btn:hover, .restart-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff00ff;
+}
+
+canvas {
+    border: 3px solid #00ffff;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    border-radius: 10px;
+    box-shadow: 0 0 30px #00ffff;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #ff00ff;
+    text-align: center;
+    box-shadow: 0 0 50px #ff00ff;
+}
+
+.game-over h2 {
+    color: #ff00ff;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ffff;
+    }
+}
+
+.footer {
+    text-align: center;
+    color: #00ffff;
+    font-size: 14px;
+    text-shadow: 0 0 10px #00ffff;
+    margin-top: auto; /* Push to bottom */
+    padding: 10px 0;
+}

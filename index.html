@@ -1,0 +1,73 @@
+<!--
+Milena Tetris - A futuristic Tetris game built with HTML5, CSS3, and JavaScript.
+This HTML file structures the game's UI: a sidebar for instructions and scoreboard,
+a main game area with canvas, and footer with credits.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milena Tetris</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Wrapper for border and padding -->
+    <div class="wrapper">
+        <!-- Main container for the entire game layout -->
+        <div class="game-container">
+        <!-- Sidebar for game instructions and scoreboard -->
+        <aside class="sidebar">
+            <!-- Instructions section -->
+            <div class="instructions">
+                <h2>How to Play</h2>
+                <p>Use controls to move and rotate pieces:</p>
+                <ul>
+                    <li><strong>R</strong> - Rotate piece clockwise</li>
+                    <li><strong>A / ←</strong> - Move piece left</li>
+                    <li><strong>S / ↓</strong> - Move piece down faster</li>
+                    <li><strong>D / →</strong> - Move piece right</li>
+                    <li><strong>Space</strong> - Pause/Resume game</li>
+                </ul>
+                <p>Clear lines to score points! Speed increases every 5 lines.</p>
+            </div>
+            <!-- Scoreboard section displaying game stats -->
+            <div class="scoreboard">
+                <h2>Scoreboard</h2>
+                <div id="score">Score: 0</div>
+                <div id="lines">Lines: 0</div>
+                <div id="level">Level: 1</div>
+                <!-- Next piece preview -->
+                <div class="next-piece">
+                    <h3>Next</h3>
+                    <!-- Small canvas to show upcoming Tetris piece -->
+                    <canvas id="next-canvas" width="90" height="90"></canvas>
+                </div>
+            </div>
+        </aside>
+        <!-- Main game area -->
+        <main class="game-area">
+            <!-- Game title -->
+            <h1>Milena Tetris</h1>
+            <!-- Button to start the game -->
+            <button id="start-btn" class="start-btn">Start Game</button>
+            <!-- Main game canvas where Tetris pieces are drawn -->
+            <canvas id="tetris" width="800" height="800"></canvas>
+            <!-- Game over overlay -->
+            <div id="game-over" class="game-over hidden">
+                <h2>Game Over</h2>
+                <!-- Button to restart after game over -->
+                <button id="restart-btn" class="restart-btn">Restart</button>
+            </div>
+        </main>
+        </div>
+        <!-- Footer with copyright and credits -->
+        <footer class="footer">
+            &copy; 2026 Made by Milena
+        </footer>
+    </div>
+    <!-- Link to JavaScript file for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>
