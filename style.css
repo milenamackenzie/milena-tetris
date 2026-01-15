@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative; /* Ensure wrapper stays above background */
-    z-index: 1; /* Above background */
+    z-index: 10; /* Above background (increased from 1) */
 }
 
 /* Game container: Flex layout for sidebar and main game area, takes available space */
@@ -166,7 +166,7 @@ canvas {
     margin-top: auto; /* Push to bottom */
     padding: 10px 0;
     position: relative;
-    z-index: 1; /* Ensure footer stays above background */
+    z-index: 10; /* Ensure footer stays above background */
 }
 
 /* Animated Falling Tetris Outlines Background */
@@ -176,7 +176,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Behind all content */
+    z-index: -1; /* Behind all content (changed from 0 to -1) */
     pointer-events: none;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
 }
@@ -189,4 +189,6 @@ canvas {
     height: 100%;
     mix-blend-mode: screen;
     filter: blur(0.5px);
+    opacity: 1.0; /* Ensure full opacity for visibility */
+    z-index: 0;
 }
