@@ -8,6 +8,7 @@ body {
     color: #00ffff; /* Cyan text color */
     height: 100vh;
     overflow: auto; /* Allow scrolling if needed */
+    position: relative; /* For background layering */
 }
 
 /* Wrapper: Contains border and padding, full height */
@@ -20,6 +21,8 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    position: relative; /* Ensure wrapper stays above background */
+    z-index: 1; /* Above background */
 }
 
 /* Game container: Flex layout for sidebar and main game area, takes available space */
@@ -162,4 +165,28 @@ canvas {
     text-shadow: 0 0 10px #00ffff;
     margin-top: auto; /* Push to bottom */
     padding: 10px 0;
+    position: relative;
+    z-index: 1; /* Ensure footer stays above background */
+}
+
+/* Animated Falling Tetris Outlines Background */
+.tetris-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind all content */
+    pointer-events: none;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.tetris-bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    filter: blur(0.5px);
 }

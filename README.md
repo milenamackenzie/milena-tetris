@@ -7,6 +7,7 @@ A futuristic, web-based Tetris game built with HTML5, CSS3, and JavaScript. Feat
 ## Features
 
 - **Futuristic UI**: Dark gradient background with neon cyan and magenta accents, glassmorphism effects
+- **Animated Background**: Dynamic falling neon tetris piece outlines in pink, blue, and purple
 - **Game Mechanics**: Classic Tetris gameplay with piece rotation, line clearing, and progressive difficulty
 - **Scoring System**: Points for cleared lines, level progression every 5 lines
 - **Sound Effects**: Web Audio API-generated sounds for rotations, drops, and line clears
@@ -45,6 +46,7 @@ milena-tetris/
 ├── index.html          # Main HTML structure
 ├── style.css           # CSS styling for futuristic theme
 ├── script.js           # Game logic and mechanics
+├── background.js       # Animated falling neon tetris background
 ├── instructions.md     # Detailed game instructions
 ├── AGENTS.md           # Development guide for agentic coding
 └── README.md           # This file
@@ -57,8 +59,10 @@ milena-tetris/
 
 ## Customization
 
-- **Colors**: Modify `colors` array in `script.js` for different piece colors
-- **Speed**: Adjust `dropTime` and level progression in `script.js`
+- **Game Colors**: Modify `colors` array in `script.js` for different piece colors
+- **Background Colors**: Adjust neon colors in `background.js` (pink, blue, purple)
+- **Background Animation**: Modify falling speed, piece size, and spawn rate in `background.js`
+- **Game Speed**: Adjust `dropTime` and level progression in `script.js`
 - **Sounds**: Tweak frequencies and durations in `playSound()` function
 - **UI**: Update CSS variables for theme changes
 
