@@ -30,7 +30,7 @@ A futuristic, web-based Tetris game built with HTML5, CSS3, and JavaScript. Feat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/milena-tetris.git
+   git clone https://github.com/milenamackenzie/milena-tetris.git
    cd milena-tetris
    ```
 
@@ -46,6 +46,7 @@ milena-tetris/
 ├── style.css           # CSS styling for futuristic theme
 ├── script.js           # Game logic and mechanics
 ├── instructions.md     # Detailed game instructions
+├── AGENTS.md           # Development guide for agentic coding
 └── README.md           # This file
 ```
 
@@ -77,5 +78,4 @@ milena-tetris/
 
 - Game concept: Classic Tetris
 - Built with: HTML5 Canvas, CSS3, Vanilla JavaScript
-- Sound generation: Web Audio API</content>
-<parameter name="filePath">/milena-tetris/README.md
+- Sound generation: Web Audio API
